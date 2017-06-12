@@ -11,4 +11,10 @@ Los siguientes dos códigos generan el flujo de muones para un punto específico
 
 La forma de ejecutarlos es:
 
-> python Filtrador_todo.py 
+> python Filtrador_todo.py ArchivoSalidaCorsika.out ArchivoResultado_code1.out
+
+Esto genera un archivo **_ArchivoResultado_code1.out_** con la información del flujo de muones antes de pasar por roca con formato _(theta,phi,N)_. Luego se ejecuta el otro código de propagación a través de roca:
+
+> python Filtro_sama.py ArchivoResultado_code1.out ArchivoResultado_code2.out
+
+Esto general el flujo a través de roca.
