@@ -5,5 +5,5 @@ Para ejecutar el código **_muonstopping.py_** se neecsita el archivo de datos d
 
 La gráfica de la pérdida de energía específica (que puede estar relacionada con la ionización específica) a lo largo de la trayectoria de una partícula cargada se denomina Curva de Bragg. Para ejecutar el código se escribe en la terminal:
 
-> algo
+> python muonstopping.py
 
