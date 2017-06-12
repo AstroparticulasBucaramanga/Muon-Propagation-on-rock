@@ -7,3 +7,8 @@ La gráfica de la pérdida de energía específica (que puede estar relacionada 
 
 > python muonstopping.py
 
+Los siguientes dos códigos generan el flujo de muones para un punto específico de observación y preparan los archivos para propagar a través de la montaña y calcular el flujo de muones que pasan a través de roca. Se necesitan los archivos **_muon_2_38.dat_**, **_muon_2_65.dat_** y **_muon_2_91.dat_** y los códigos **_Filtrador_todo.py_** y **_Filtro_sama.py_**.
+
+La forma de ejecutarlos es:
+
+> python Filtrador_todo.py 
