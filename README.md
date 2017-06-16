@@ -1,20 +1,20 @@
-# Propagacion de Muones en Roca
-Acá unos códigos para la propagación de muones en roca. Se usan para inferir y calculas el flujo de muones que atraviesan una estructura asumiendo un flujo de muones incidentes.
+# Muon Propagation on rock
+Here some codes for the propagation of muons in rock. They are used to infer and calculate the flow of muons that cross a structure assuming a flow of incident muons.
 
-Para ejecutar el código **_muonstopping.py_** se neecsita el archivo de datos de pérdidas de energas **_muon_water_dedx.dat_** para generar unas curvas de Bragg. 
+To run the **_muonstopping.py_** code, the **_muon_water_dedx.dat_** energy loss data file is needed to generate Bragg curves.
 
-La gráfica de la pérdida de energía específica (que puede estar relacionada con la ionización específica) a lo largo de la trayectoria de una partícula cargada se denomina Curva de Bragg. Para ejecutar el código se escribe en la terminal:
+_The graph of specific energy loss (which may be related to specific ionization) along the path of a charged particle is called the Bragg Curve_. To execute the code it is written in the terminal:
 
 > python muonstopping.py
 
-Los siguientes dos códigos generan el flujo de muones para un punto específico de observación y preparan los archivos para propagar a través de la montaña y calcular el flujo de muones que pasan a través de roca. Se necesitan los archivos **_muon_2_38.dat_**, **_muon_2_65.dat_** y **_muon_2_91.dat_** y los códigos **_Filtrador_todo.py_** y **_Filtro_sama.py_**.
+The following two codes generate the muon flux for a specific point of observation and prepare the files to propagate through the mountain and calculate the flux of muons passing through rock. You need the **_muon_2_38.dat_**, **_muon_2_65.dat_**, and **_muon_2_91.dat_** files, and the **_Filtrador_todo.py_** and **_Filtro_sama.py_** codes.
 
-La forma de ejecutarlos es:
+The way to execute them is:
 
 > python Filtrador_todo.py ArchivoSalidaCorsika.out ArchivoResultado_code1.out
 
-Esto genera un archivo **_ArchivoResultado_code1.out_** con la información del flujo de muones antes de pasar por roca con formato _(theta,phi,N)_. Se neecsita el archivo **_ArchivoSalidaCorsika.out_** el cual tiene formato _(px,py,pz,p)_ que es el archivo de salida de la simulación de Corsika con los momentos en las tres direcciones y el momento total de cada partícula. Luego se ejecuta el otro código de propagación a través de roca:
+This generates a file **_ArchivoResultado_code1.out_** with the information of the muon before passing through rock with format (theta, phi, N). You need the file **_ArchivoSalidaCorsika.out_** which has format (px, p, pz, p) which is the output file of the Corsika simulation with the moments in the three directions and the total momentum of each particle. Then the other propagation code is executed through rock:
 
 > python Filtro_sama.py ArchivoResultado_code1.out ArchivoResultado_code2.out
 
-Esto general el flujo a través de roca.
+This generates the flux through rock.
